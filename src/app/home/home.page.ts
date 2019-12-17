@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private iab: InAppBrowser) {}
+  public login() {
+    const browser = this.iab.create('https://ionicframework.com/');
+    //browser.executeScript(...);
+    //browser.insertCSS(...);
+    browser.on('loadstop').subscribe(event => {
+      browser.insertCSS({ code: "body{color: red;" });
+    });
+
+    browser.close();
+  }
 
 }

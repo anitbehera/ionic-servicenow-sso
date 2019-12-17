@@ -1,5 +1,7 @@
 {
   "name": "snow-sso",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
