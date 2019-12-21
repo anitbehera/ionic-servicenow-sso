@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { SpinnerDialog } from '@ionic-native/spinner-dialog/ngx';
+import { HTTP } from '@ionic-native/http/ngx';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -20,6 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
     SplashScreen,
     InAppBrowser,
     SpinnerDialog,
+    HTTP,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
